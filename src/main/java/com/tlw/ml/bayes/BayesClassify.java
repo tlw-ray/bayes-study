@@ -109,13 +109,21 @@ public class BayesClassify {
         int r = 0;
         while (r < data.size()) {
 
-            for (int i = 0; i < 4; i++)
+            char category = '?';
+            for (int i = 0; i < 4; i++) {
                 //读取数字放入数组的第i个元素
+                category = data.get(r).charAt(0);
                 x[i] = Integer.parseInt(data.get(r).split(",", 5)[i + 1]);
+            }
 
             x_in_B = bayes(x, category_B) * p_yB;
             x_in_L = bayes(x, category_L) * p_yL;
             x_in_R = bayes(x, category_R) * p_yR;
+
+            System.out.println("x_is: " + category);
+            System.out.println("x_in_B: " + x_in_B);
+            System.out.println("x_in_L: " + x_in_L);
+            System.out.println("x_in_R: " + x_in_R);
 
 
             if (x_in_B == Math.max(Math.max(x_in_B, x_in_L), x_in_R)) {

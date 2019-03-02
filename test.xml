@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hmm SYSTEM "hmm03.dtd">
+
+<hmm version="0.3">
+    <name>
+        Hidden Markov Model Test
+    </name>
+    <model>
+        <states count="4">
+        </states>
+        <symbols count="5">
+        </symbols>
+        <bounds ll_bound="0" ur_bound="1">
+        </bounds>
+        <transition_matrix>
+            <element row="0" col="0" value="0.8552696321840693"/>
+            <element row="0" col="1" value="0.1447303678159307"/>
+            <element row="0" col="2" value="0.0"/>
+            <element row="0" col="3" value="0.0"/>
+            <element row="1" col="0" value="0.0"/>
+            <element row="1" col="1" value="0.813631876666566"/>
+            <element row="1" col="2" value="0.1863681233334339"/>
+            <element row="1" col="3" value="0.0"/>
+            <element row="2" col="0" value="0.0"/>
+            <element row="2" col="1" value="0.0"/>
+            <element row="2" col="2" value="0.32713052353324595"/>
+            <element row="2" col="3" value="0.672869476466754"/>
+            <element row="3" col="0" value="0.0"/>
+            <element row="3" col="1" value="0.0"/>
+            <element row="3" col="2" value="0.0"/>
+            <element row="3" col="3" value="1.0"/>
+        </transition_matrix>
+        <symbol_generation_matrix>
+            <element row="0" col="0" value="0.16118808675508084"/>
+            <element row="0" col="1" value="0.12624588233246603"/>
+            <element row="0" col="2" value="0.4852343629727656"/>
+            <element row="0" col="3" value="0.19506445534236075"/>
+            <element row="0" col="4" value="0.03226721259732687"/>
+            <element row="1" col="0" value="0.2731268822024461"/>
+            <element row="1" col="1" value="0.23285104374183022"/>
+            <element row="1" col="2" value="0.22917089600546847"/>
+            <element row="1" col="3" value="0.03500546537626385"/>
+            <element row="1" col="4" value="0.2298457126739912"/>
+            <element row="2" col="0" value="0.34588571495821147"/>
+            <element row="2" col="1" value="0.07132403160731036"/>
+            <element row="2" col="2" value="0.1410705871269049"/>
+            <element row="2" col="3" value="0.28053356588211353"/>
+            <element row="2" col="4" value="0.1611861004254597"/>
+            <element row="3" col="0" value="0.24358187826788663"/>
+            <element row="3" col="1" value="0.12157202961661341"/>
+            <element row="3" col="2" value="0.22318521127193666"/>
+            <element row="3" col="3" value="0.08172604049117321"/>
+            <element row="3" col="4" value="0.32993484035239"/>
+        </symbol_generation_matrix>
+        <initial_state_vector>
+            <element row="0" value="0.21143381209258094"/>
+            <element row="1" value="0.39283538709745547"/>
+            <element row="2" value="0.07565245110682778"/>
+            <element row="3" value="0.32007834970313565"/>
+        </initial_state_vector>
+    </model>
+</hmm>

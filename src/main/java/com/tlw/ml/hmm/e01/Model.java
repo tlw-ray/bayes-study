@@ -1,4 +1,4 @@
-package com.tlw.ml.hmm;
+package com.tlw.ml.hmm.e01;
 
 //////////////////////////////////////////////////////////////////////////
 // The contents of this file are subject to the Mozilla Public License

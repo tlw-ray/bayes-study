@@ -1,4 +1,4 @@
-package com.tlw.ml.hmm;
+package com.tlw.ml.hmm.e01;
 
 //////////////////////////////////////////////////////////////////////////
 // The contents of this file are subject to the Mozilla Public License
@@ -30,6 +30,9 @@ Notations and variable names also closely follow the conventions used in this pa
 
 @copyright  Hyoungsoo Yoon
 @date  Feb 21st, 1999
+
+来源网址:
+http://hmmsdk.sourceforge.net/hmmlib-0.3/src/Hmm_java.html
 */
 
 import org.xml.sax.SAXException;

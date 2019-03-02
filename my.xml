@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hmm SYSTEM "hmm03.dtd">
+
+<hmm version="0.3">
+    <name>
+        Hidden Markov Model Test
+    </name>
+    <model>
+        <states count="1">
+        </states>
+        <symbols count="1">
+        </symbols>
+        <bounds ll_bound="0" ur_bound="0">
+        </bounds>
+        <transition_matrix>
+            <element row="0" col="0" value="0.9999999999999999"/>
+        </transition_matrix>
+        <symbol_generation_matrix>
+            <element row="0" col="0" value="1.0000000000000002"/>
+        </symbol_generation_matrix>
+        <initial_state_vector>
+            <element row="0" value="1.0000000000000002"/>
+        </initial_state_vector>
+    </model>
+</hmm>
