@@ -3,6 +3,10 @@ package com.tlw.ml.hmm.e02;
 /**
  * 维特比算法
  * @author hankcs
+ * 知识来源:
+ * http://www.cnblogs.com/skyme/p/4651331.html
+ * 代码来源:
+ * https://github.com/hankcs/Viterbi/tree/master/src/com/hankcs/algorithm
  */
 public class Viterbi
 {
@@ -13,7 +17,7 @@ public class Viterbi
      * @param start_p 初始概率（隐状态）
      * @param trans_p 转移概率（隐状态）
      * @param emit_p 发射概率 （隐状态表现为显状态的概率）
-     * @return 最可能的序列
+     * @return 最可能的隐序列
      */
     public static int[] compute(int[] obs, int[] states, double[] start_p, double[][] trans_p, double[][] emit_p)
     {

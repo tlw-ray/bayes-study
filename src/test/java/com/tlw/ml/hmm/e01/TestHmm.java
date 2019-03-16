@@ -1,4 +1,4 @@
-package com.tlw.ml.hmm;
+package com.tlw.ml.hmm.e01;
 
 import com.tlw.ml.hmm.e01.Model;
 import org.junit.Test;
