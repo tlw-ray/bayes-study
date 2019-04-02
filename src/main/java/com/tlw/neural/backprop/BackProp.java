@@ -1,4 +1,4 @@
-package com.tlw.neuro.backprop;
+package com.tlw.neural.backprop;
 
 public class BackProp {
 

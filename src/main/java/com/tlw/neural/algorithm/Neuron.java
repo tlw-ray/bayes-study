@@ -1,4 +1,4 @@
-package com.tlw.neuro.algorithm;
+package com.tlw.neural.algorithm;
 
 import java.util.*;
 
