@@ -1,9 +1,11 @@
 package com.tlw.neural.ui;
 
+import com.tlw.neural.ui.common.PropertyPanel;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class NeuralResultPanel extends JPanel {
+public class NeuralResultPanel extends PropertyPanel {
 
     protected JLabel convergenceTimesLabel = new JLabel("Convergence Times: ");
     protected JLabel convergenceTimesValueLabel = new JLabel("?");
@@ -16,24 +18,13 @@ public class NeuralResultPanel extends JPanel {
 
 
     public NeuralResultPanel(){
-        setBorder(BorderFactory.createTitledBorder("Neural Result"));
         convergenceTimesValueLabel.setHorizontalAlignment(JLabel.CENTER);
         trainingRecognitionRateValueLabel.setHorizontalAlignment(JLabel.CENTER);
         testingRecognitionRateValueLabel.setHorizontalAlignment(JLabel.CENTER);
-        setLayout(new GridBagLayout());
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridx = GridBagConstraints.REMAINDER;
-        gridBagConstraints.gridy = GridBagConstraints.RELATIVE;
-        gridBagConstraints.weighty = 1;
-        gridBagConstraints.anchor = GridBagConstraints.EAST;
-        add(convergenceTimesLabel, gridBagConstraints);
-        add(trainingRecognitionRateLabel, gridBagConstraints);
-        add(testingRecognitionRateLabel, gridBagConstraints);
-        gridBagConstraints.weightx = 1;
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
-        add(convergenceTimesValueLabel, gridBagConstraints);
-        add(trainingRecognitionRateValueLabel, gridBagConstraints);
-        add(testingRecognitionRateValueLabel, gridBagConstraints);
+
+        setBorder(BorderFactory.createTitledBorder("Result"));
+        addRow(convergenceTimesLabel, convergenceTimesValueLabel);
+        addRow(trainingRecognitionRateLabel, trainingRecognitionRateValueLabel);
+        addRow(testingRecognitionRateLabel, testingRecognitionRateValueLabel);
     }
 }

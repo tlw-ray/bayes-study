@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class NeuralPanel extends JPanel {
 
-    protected JPanel drawPanel = new JPanel();
+    protected JPanel drawPanel = new DrawPanel();
     protected OperatePanel operatePanel = new OperatePanel();
     protected DataPanel dataPanel = new DataPanel();
 
