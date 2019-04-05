@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NeuralModel {
+    protected List<Double[]> input = new ArrayList();
+    protected List<Double[]> trainData = new ArrayList();
+    protected List<Double[]> testData = new ArrayList();
+    protected List<Double> outputKinds = new ArrayList();
 
-    private List<Double[]> input = new ArrayList();
-    private List<Double[]> trainData = new ArrayList();
-    private List<Double[]> testData = new ArrayList();
-    private List<Double> outputKinds = new ArrayList();
-
-    private int maxTimes = 1000;
-    private int magnification = 50;
-    private double threshold = 0;
-    private double minRange = -0.5;
-    private double maxRange = 0.5;
+    protected int maxTimes = 1000;
+    protected int magnification = 50;
+    protected double threshold = 0;
+    protected double minRange = -0.5;
+    protected double maxRange = 0.5;
 
     public int getMaxTimes() {
         return maxTimes;
@@ -87,4 +86,5 @@ public class NeuralModel {
     public void setOutputKinds(List<Double> outputKinds) {
         this.outputKinds = outputKinds;
     }
+
 }

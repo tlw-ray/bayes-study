@@ -16,12 +16,13 @@ public class BackpropCoordinatePanel extends CoordinatePanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        int magnification = backpropModel.getMagnification();
         Graphics2D g2 = (Graphics2D) g;
         // Draw output kind area
         List<Double[]> input = backpropModel.getInput();
         int maxTimes = backpropModel.getMaxTimes();
         double minError = backpropModel.getMinError();
-        double size = backpropModel.getSize();
+        double size = backpropModel.getMySize();
         List<Double> outputKinds = backpropModel.getOutputKinds();
         NeuralNetwork network = backpropModel.getNetwork();
         boolean drawMode  = backpropModel.isDrawMode();

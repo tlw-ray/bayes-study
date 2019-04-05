@@ -1,12 +1,16 @@
 package com.tlw.neural.ui;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 
 import static javax.swing.border.TitledBorder.CENTER;
 import static javax.swing.border.TitledBorder.DEFAULT_POSITION;
 
-public class DrawPanel extends JPanel {
+public class DrawPanel extends JPanel implements ChangeListener {
+
+    private NeuralModel neuralModel;
 
     protected CoordinatePanel coordinatePanel = new CoordinatePanel();
 
@@ -34,38 +38,59 @@ public class DrawPanel extends JPanel {
         zoomSlider.setValueIsAdjusting(false);
         zoomSlider.putClientProperty("JSlider.isFilled", true);
         zoomSlider.putClientProperty("Slider.paintThumbArrowShape", false);
-//                <properties>
-//          <inverted value="false"/>
-//          <majorTickSpacing value="10"/>
-//          <minimum value="10"/>
-//          <minorTickSpacing value="5"/>
-//          <paintLabels value="true"/>
-//          <paintTicks value="true"/>
-//          <snapToTicks value="false"/>
-//          <value value="50"/>
-//          <valueIsAdjusting value="false"/>
-//        </properties>
-//        <clientProperties>
-//          <JSlider.isFilled class="java.lang.Boolean" value="false"/>
-//          <Slider.paintThumbArrowShape class="java.lang.Boolean" value="false"/>
-//        </clientProperties>
 
         setLayout(new GridBagLayout());
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.weightx = 1;
-        gridBagConstraints.weighty = 1;
         gridBagConstraints.fill = GridBagConstraints.BOTH;
         gridBagConstraints.insets = new Insets(5,5,5,5);
         gridBagConstraints.gridx = GridBagConstraints.REMAINDER;
         gridBagConstraints.gridy = GridBagConstraints.RELATIVE;
         add(coordinatePanel, gridBagConstraints);
+        gridBagConstraints.weighty = 1;
         if(getDrawParameterPanel() != null){
             add(drawParameterPanel, gridBagConstraints);
         }
         add(zoomPanel, gridBagConstraints);
+
+        zoomSlider.addChangeListener(this);
+    }
+
+    @Override
+    public void stateChanged(ChangeEvent e) {
+        getZoomSlider().setBorder(
+                BorderFactory.createTitledBorder(null,
+                        Integer.toString(getZoomSlider().getValue()), CENTER, DEFAULT_POSITION));
+        getNeuralModel().setMagnification(getZoomSlider().getValue());
+        getCoordinatePanel().repaint();
     }
 
     protected JPanel getDrawParameterPanel(){
         return null;
+    }
+
+    public CoordinatePanel getCoordinatePanel() {
+        return coordinatePanel;
+    }
+
+    public JLabel getZoomLabel() {
+        return zoomLabel;
+    }
+
+    public JSlider getZoomSlider() {
+        return zoomSlider;
+    }
+
+    public JPanel getZoomPanel() {
+        return zoomPanel;
+    }
+
+    public NeuralModel getNeuralModel() {
+        return neuralModel;
+    }
+
+    public void setNeuralModel(NeuralModel neuralModel) {
+        this.neuralModel = neuralModel;
+        getCoordinatePanel().setNeuralModel(neuralModel);
     }
 }

@@ -9,7 +9,7 @@ public class BackpropModel extends NeuralModel {
     private double momentum = 0.7;
     private double learningRate = 0.1;
     private double minError = 0.01;
-    private double size = 20.0;
+    private double mysize = 20.0;
     private boolean drawMode = false;
 
     private NeuralNetwork network;
@@ -46,12 +46,12 @@ public class BackpropModel extends NeuralModel {
         this.minError = minError;
     }
 
-    public double getSize() {
-        return size;
+    public double getMySize() {
+        return mysize;
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    public void setMySize(double size) {
+        this.mysize = size;
     }
 
     public boolean isDrawMode() {
@@ -69,4 +69,5 @@ public class BackpropModel extends NeuralModel {
     public void setNetwork(NeuralNetwork network) {
         this.network = network;
     }
+
 }

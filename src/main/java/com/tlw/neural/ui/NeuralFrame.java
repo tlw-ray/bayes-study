@@ -2,35 +2,42 @@ package com.tlw.neural.ui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
-public class NeuralFrame extends JFrame {
+public class NeuralFrame extends JFrame implements ActionListener {
 
     public static void main(String[] args){
         NeuralFrame neuralFrame = new NeuralFrame();
         neuralFrame.setVisible(true);
     }
 
+    protected JMenuBar menuBar = new JMenuBar();
+    protected JMenu filesMenu = new JMenu("Files");
+    protected JMenu skinsMenu = new JMenu("Skins");
+    // Files menu
+    protected JMenuItem loadMenuItem = new JMenuItem("Load", KeyEvent.VK_L);
+    protected JMenuItem generateMenuItem = new JMenuItem("Generate", KeyEvent.VK_G);
+
     public NeuralFrame(){
         createMenu();
         setIconImage(Toolkit.getDefaultToolkit().getImage("icon.png"));
         add(getNeuralPanel(), BorderLayout.CENTER);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1200, 768);
+//        setSize(1200, 768);
+        pack();
         setLocationRelativeTo(null);
     }
 
     protected NeuralPanel getNeuralPanel(){
-        return new NeuralPanel();
+        NeuralPanel neuralPanel = new NeuralPanel();
+        NeuralModel neuralModel = new NeuralModel();
+        neuralPanel.setNeuralModel(neuralModel);
+        return neuralPanel;
     }
 
     private void createMenu(){
-        JMenuBar menuBar = new JMenuBar();
-        JMenu filesMenu = new JMenu("Files");
-        JMenu skinsMenu = new JMenu("Skins");
-        // Files menu
-        JMenuItem loadMenuItem = new JMenuItem("Load", KeyEvent.VK_L);
-        JMenuItem generateMenuItem = new JMenuItem("Generate", KeyEvent.VK_G);
         filesMenu.setMnemonic(KeyEvent.VK_F);
         filesMenu.add(loadMenuItem);
         filesMenu.add(generateMenuItem);
@@ -71,6 +78,8 @@ public class NeuralFrame extends JFrame {
         skinsNimbusMenuItem.addActionListener(e -> changeLAF("Nimbus"));
         menuBar.add(skinsMenu);
         setJMenuBar(menuBar);
+
+        loadMenuItem.addActionListener(this);
     }
 
     private void changeLAF(String name) {
@@ -84,15 +93,19 @@ public class NeuralFrame extends JFrame {
             } else {
                 UIManager.setLookAndFeel(name);
             }
-            resetFrame();
+            SwingUtilities.updateComponentTreeUI(this);
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e1) {
             System.out.println("Failed to load the skin!");
         }
     }
 
-    private void resetFrame() {
-        SwingUtilities.updateComponentTreeUI(this);
-        setLocationRelativeTo(null);
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == loadMenuItem) {
+            getNeuralPanel().loadFile();
+        }else if(e.getSource() == generateMenuItem) {
+            getNeuralPanel().startTrain();
+        }
     }
 
 }

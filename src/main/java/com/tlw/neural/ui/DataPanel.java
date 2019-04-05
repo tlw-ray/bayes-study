@@ -1,21 +1,28 @@
 package com.tlw.neural.ui;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 public class DataPanel extends JPanel {
 
-    JLabel trainingLabel = new JLabel("Training Data");
-    JTable trainingTable = new JTable();
-    JScrollPane trainingScrollPane = new JScrollPane(trainingTable);
+    protected DefaultTableModel trainTableModel = new DefaultTableModel();
+    protected JLabel trainingLabel = new JLabel("Training Data");
+    protected JTable trainingTable = new JTable(trainTableModel);
+    protected JScrollPane trainingScrollPane = new JScrollPane(trainingTable);
 
-    JLabel testingLabel = new JLabel("Testing Data");
-    JTable testingTable = new JTable();
-    JScrollPane testingScrollPane = new JScrollPane(testingTable);
+    protected DefaultTableModel testTableModel = new DefaultTableModel();
+    protected JLabel testingLabel = new JLabel("Testing Data");
+    protected JTable testingTable = new JTable(testTableModel);
+    protected JScrollPane testingScrollPane = new JScrollPane(testingTable);
 
     public DataPanel(){
         trainingLabel.setHorizontalAlignment(JLabel.CENTER);
         testingLabel.setHorizontalAlignment(JLabel.CENTER);
+
+        Dimension dimension = new Dimension(300, 200);
+        trainingScrollPane.setPreferredSize(dimension);
+        testingScrollPane.setPreferredSize(dimension);
 
         setLayout(new GridBagLayout());
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
@@ -31,5 +38,13 @@ public class DataPanel extends JPanel {
         add(testingLabel, gridBagConstraints);
         gridBagConstraints.weighty = 1;
         add(testingScrollPane, gridBagConstraints);
+    }
+
+    public DefaultTableModel getTrainTableModel() {
+        return trainTableModel;
+    }
+
+    public DefaultTableModel getTestTableModel() {
+        return testTableModel;
     }
 }
