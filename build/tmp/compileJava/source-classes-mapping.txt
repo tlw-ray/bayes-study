@@ -1,0 +1,96 @@
+com/tlw/neural/algorithm/Connection.java
+ com.tlw.neural.algorithm.Connection
+com/tlw/neural/perceptron/PerceptronResult.java
+ com.tlw.neural.perceptron.PerceptronResult
+com/tlw/neural/ui/NeuralFrame.java
+ com.tlw.neural.ui.NeuralFrame
+com/tlw/ml/hmm/e02/WeatherExample.java
+ com.tlw.ml.hmm.e02.WeatherExample
+ com.tlw.ml.hmm.e02.WeatherExample$Activity
+ com.tlw.ml.hmm.e02.WeatherExample$Weather
+com/tlw/neural/perceptron/Perceptron.java
+ com.tlw.neural.perceptron.Perceptron
+ com.tlw.neural.perceptron.Perceptron$1
+ com.tlw.neural.perceptron.Perceptron$2
+ com.tlw.neural.perceptron.Perceptron$3
+ com.tlw.neural.perceptron.Perceptron$4
+ com.tlw.neural.perceptron.Perceptron$5
+ com.tlw.neural.perceptron.Perceptron$6
+ com.tlw.neural.perceptron.Perceptron$GPanel
+com/tlw/ml/hmm/e01/Model.java
+ com.tlw.ml.hmm.e01.Model
+com/tlw/neural/backprop/BackpropFrame.java
+ com.tlw.neural.backprop.BackpropFrame
+com/tlw/neural/backprop/BackpropResultPanel.java
+ com.tlw.neural.backprop.BackpropResultPanel
+com/tlw/ml/bayes/BayesClassify.java
+ com.tlw.ml.bayes.BayesClassify
+com/tlw/neural/ui/OperatePanel.java
+ com.tlw.neural.ui.OperatePanel
+com/tlw/neural/ui/common/RangePanel.java
+ com.tlw.neural.ui.common.RangePanel
+com/tlw/neural/ui/NeuralPanel.java
+ com.tlw.neural.ui.NeuralPanel
+com/tlw/neural/ui/NeuralModel.java
+ com.tlw.neural.ui.NeuralModel
+com/tlw/neural/ui/CoordinatePanel.java
+ com.tlw.neural.ui.CoordinatePanel
+com/tlw/neural/perceptron/PerceptronPanel.java
+ com.tlw.neural.perceptron.PerceptronPanel
+com/tlw/neural/ui/common/PropertyPanel.java
+ com.tlw.neural.ui.common.PropertyPanel
+com/tlw/neural/perceptron/PerceptronFrame.java
+ com.tlw.neural.perceptron.PerceptronFrame
+com/tlw/ml/hmm/e02/Viterbi.java
+ com.tlw.ml.hmm.e02.Viterbi
+com/tlw/neural/backprop/BackpropPanel.java
+ com.tlw.neural.backprop.BackpropPanel
+com/tlw/neural/perceptron/PerceptronResultPanel.java
+ com.tlw.neural.perceptron.PerceptronResultPanel
+com/tlw/neural/ui/DrawPanel.java
+ com.tlw.neural.ui.DrawPanel
+com/tlw/neural/algorithm/Neuron.java
+ com.tlw.neural.algorithm.Neuron
+com/tlw/neural/algorithm/NeuralNetwork.java
+ com.tlw.neural.algorithm.NeuralNetwork
+com/tlw/neural/backprop/BackpropCoordinatePanel.java
+ com.tlw.neural.backprop.BackpropCoordinatePanel
+com/tlw/neural/ui/DataPanel.java
+ com.tlw.neural.ui.DataPanel
+com/tlw/ml/hmm/e02/DoctorExample.java
+ com.tlw.ml.hmm.e02.DoctorExample
+ com.tlw.ml.hmm.e02.DoctorExample$Feel
+ com.tlw.ml.hmm.e02.DoctorExample$Status
+com/tlw/neural/backprop/BackProp.java
+ com.tlw.neural.backprop.BackProp
+com/tlw/neural/backprop/MainFrame.java
+ com.tlw.neural.backprop.MainFrame
+ com.tlw.neural.backprop.MainFrame$1
+ com.tlw.neural.backprop.MainFrame$10
+ com.tlw.neural.backprop.MainFrame$2
+ com.tlw.neural.backprop.MainFrame$3
+ com.tlw.neural.backprop.MainFrame$4
+ com.tlw.neural.backprop.MainFrame$5
+ com.tlw.neural.backprop.MainFrame$6
+ com.tlw.neural.backprop.MainFrame$7
+ com.tlw.neural.backprop.MainFrame$8
+ com.tlw.neural.backprop.MainFrame$9
+ com.tlw.neural.backprop.MainFrame$GPanel
+com/tlw/spark/MemoryCalc.java
+ com.tlw.spark.MemoryCalc
+com/tlw/ml/hmm/e01/Hmm.java
+ com.tlw.ml.hmm.e01.Hmm
+com/tlw/neural/backprop/BackpropPropertyPanel.java
+ com.tlw.neural.backprop.BackpropPropertyPanel
+com/tlw/neural/backprop/BackpropModel.java
+ com.tlw.neural.backprop.BackpropModel
+com/tlw/neural/ui/NeuralResultPanel.java
+ com.tlw.neural.ui.NeuralResultPanel
+com/tlw/neural/ui/NeuralPropertyPanel.java
+ com.tlw.neural.ui.NeuralPropertyPanel
+com/tlw/neural/perceptron/PerceptronCoordinatePanel.java
+ com.tlw.neural.perceptron.PerceptronCoordinatePanel
+com/tlw/neural/perceptron/PerceptronModel.java
+ com.tlw.neural.perceptron.PerceptronModel
+com/tlw/spark/DiskCalc.java
+ com.tlw.spark.DiskCalc
