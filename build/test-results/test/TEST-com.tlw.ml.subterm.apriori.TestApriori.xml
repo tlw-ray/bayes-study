@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tlw.ml.subterm.apriori.TestApriori" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-11T02:13:19" hostname="MiWiFi-R2100-srv" time="0.017">
+  <properties/>
+  <testcase name="testApriori" classname="com.tlw.ml.subterm.apriori.TestApriori" time="0.017"/>
+  <system-out><![CDATA[--------
+	[0]	2
+	[1]	3
+	[2]	3
+	[4]	3
+--------
+	[0, 2]	2
+	[1, 2]	2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

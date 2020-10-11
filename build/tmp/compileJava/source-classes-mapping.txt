@@ -27,8 +27,6 @@ com/tlw/ml/bayes/BayesClassify.java
  com.tlw.ml.bayes.BayesClassify
 com/tlw/neural/ui/OperatePanel.java
  com.tlw.neural.ui.OperatePanel
-com/tlw/neural/ui/common/RangePanel.java
- com.tlw.neural.ui.common.RangePanel
 com/tlw/neural/ui/NeuralPanel.java
  com.tlw.neural.ui.NeuralPanel
 com/tlw/neural/ui/NeuralModel.java
@@ -80,6 +78,8 @@ com/tlw/spark/MemoryCalc.java
  com.tlw.spark.MemoryCalc
 com/tlw/ml/hmm/e01/Hmm.java
  com.tlw.ml.hmm.e01.Hmm
+com/tlw/neural/ui/common/RangePanel.java
+ com.tlw.neural.ui.common.RangePanel
 com/tlw/neural/backprop/BackpropPropertyPanel.java
  com.tlw.neural.backprop.BackpropPropertyPanel
 com/tlw/neural/backprop/BackpropModel.java
@@ -92,5 +92,5 @@ com/tlw/neural/perceptron/PerceptronCoordinatePanel.java
  com.tlw.neural.perceptron.PerceptronCoordinatePanel
 com/tlw/neural/perceptron/PerceptronModel.java
  com.tlw.neural.perceptron.PerceptronModel
-com/tlw/spark/DiskCalc.java
- com.tlw.spark.DiskCalc
+com/tlw/ml/subterm/apriori/Apriori.java
+ com.tlw.ml.subterm.apriori.Apriori
