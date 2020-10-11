@@ -1,4 +1,4 @@
-package com.tlw.ml.subterm.apriori;
+package com.tlw.ml.sub.apriori;
 
 import org.apache.commons.collections4.set.ListOrderedSet;
 import org.apache.commons.math3.util.Combinations;
@@ -52,7 +52,6 @@ public class TestApriori {
         int[] ints1 = new int[]{1,2,3,4};
         int[] ints2 = new int[]{1,2,5};
         int[][] ints = new int[][]{ints1, ints2};
-//        Arrays.stream(ints1).boxed().collect(Collectors.toSet());
         int count = Arrays.stream(ints).flatMapToInt(x -> Arrays.stream(x)).boxed().collect(Collectors.toSet()).size();
         System.out.println(count);
     }

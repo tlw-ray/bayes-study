@@ -1,4 +1,0 @@
-com/tlw/ml/hmm/e01/TestHmm.java
- com.tlw.ml.hmm.e01.TestHmm
-com/tlw/ml/subterm/apriori/TestApriori.java
- com.tlw.ml.subterm.apriori.TestApriori
