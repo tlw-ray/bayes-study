@@ -9,7 +9,6 @@ import java.util.concurrent.BlockingQueue;
 public class TestProducerConsumer {
     public static void main(String[] args){
         BlockingQueue<String> blockingQueue = new ArrayBlockingQueue(20);
-
         for(int i=0; i<4; i++){
             new Thread(new Producer(blockingQueue)).start();
             new Thread(new Consumer(blockingQueue)).start();
